@@ -1,0 +1,165 @@
+/* Main styles for the Knowledge Vault */
+
+/* Gradient background for headers */
+.stApp header {
+    background: linear-gradient(90deg, #1E0CAD 0%, #FF4B4B 100%);
+}
+
+/* Card-like styling for sections */
+div.stBlock {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.stBlock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    div.stBlock {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .stContainer {
+        padding: 10px !important;
+    }
+    
+    /* Make column layout stacked on mobile */
+    [data-testid="column"] {
+        width: 100% !important;
+    }
+}
+
+/* Button styling */
+.stButton>button {
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields */
+.stTextInput>div {
+    border-radius: 10px !important;
+}
+
+/* Progress bar colors */
+.stProgress>div>div {
+    background-color: #FF4B4B;
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 4px 4px 0px 0px;
+    padding: 10px 16px;
+    background-color: #262730;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #FF4B4B !important;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: #1E1E1E;
+    border-right: 2px solid #FF4B4B;
+}
+
+/* Animations for loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.stSpinner>div {
+    animation: pulse 1.5s infinite;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF4B4B;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6B6B;
+}
+
+/* Style for search results */
+.result-card {
+    border-left: 4px solid #FF4B4B;
+    padding-left: 10px;
+}
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    div.stBlock {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .stContainer {
+        padding: 10px !important;
+    }
+    
+    /* Make column layout stacked on mobile */
+    [data-testid="column"] {
+        width: 100% !important;
+    }
+    
+    /* Smaller text on mobile */
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2, h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Adjust button size on mobile */
+    .stButton>button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* GitHub deployment banner */
+.github-deploy-banner {
+    background: linear-gradient(90deg, #4CAF50, #2196F3);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
